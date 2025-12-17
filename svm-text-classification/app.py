@@ -14,7 +14,7 @@ class TextInput(BaseModel):
 # Load best model
 # ----------------------------
 # Change the filename to either manual or library best model
-best_model_file = "best_model_manual.pkl"  # or "best_model.pkl" for library
+best_model_file = "best_model_library.pkl"  # or "best_model.pkl" for library
 w, b = joblib.load(best_model_file)
 
 # ----------------------------
@@ -23,7 +23,7 @@ w, b = joblib.load(best_model_file)
 # This should match the vocab from training
 # Here we rebuild it from a saved file or recreate from your script
 # For demo, define a small example vocab. Replace with your actual vocab.
-word_to_idx = joblib.load("word_to_idx.pkl")  # save this during training
+word_to_idx = joblib.load("word_to_idx_library.pkl")  # save this during training
 
 # ----------------------------
 # Text preprocessing
