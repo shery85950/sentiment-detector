@@ -47,7 +47,7 @@ word_to_idx = {w:i for i,w in enumerate(vocab)}
 # ----------------------------
 # Save vocab for API
 # ----------------------------
-joblib.dump(word_to_idx, "word_to_idx.pkl")
+joblib.dump(word_to_idx, "word_to_idx_manual.pkl")
 
 def vectorize(text):
     v = np.zeros(len(word_to_idx))
@@ -150,3 +150,4 @@ plt.legend()
 plt.title("Manual SVM Training Loss")
 plt.savefig("manual_training_curve.png")
 plt.show()
+
